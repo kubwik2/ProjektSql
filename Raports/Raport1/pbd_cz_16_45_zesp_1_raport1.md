@@ -4,7 +4,7 @@ dzień i godz zajęć: 16:45
 
 nr zespołu: 1
 
-**Autorzy:** Wiktor Jabrzyk, Jakub Kałużny, Karol Jabłoński
+**Autorzy:** Wiktor Jabrzyk WJ, Jakub Kałużny JK, Karol Jabłoński KJ
 
 link do repozytorium git: [github.com/kubwik2/ProjektSql](https://github.com/kubwik2/ProjektSql)
 
@@ -41,7 +41,7 @@ CREATE TABLE Categories (
 | :-------------------- | :-------------- | :------------------------ | :--------------------------------- |
 | `CategoryID`          | `int`           | `PRIMARY KEY`, `NOT NULL` | Unikalny identyfikator kategorii   |
 | `CategoryName`        | `nvarchar(max)` | `NOT NULL`                | Nazwa kategorii                    |
-| `CategoryDescription` | `nvarchar(max)` | `NOT NULL`                | opis przeznaczenia danej kategorii |
+| `CategoryDescription` | `nvarchar(max)` | `NOT NULL`                | Opis przeznaczenia danej kategorii |
 
 ---
 
@@ -72,7 +72,7 @@ CREATE TABLE Products (
 | `ProductID`          | `bigint`        | `PRIMARY KEY`, `NOT NULL` | Unikalny identyfikator gotowego produktu                     |
 | `ProductName`        | `nvarchar(max)` | `NOT NULL`                | Nazwa mebla/wyposażenia                                      |
 | `UnitPrice`          | `decimal(19,2)` | `NOT NULL`                | Cena jednostkowa produktu                                    |
-| `ProductDescription` | `nvarchar(max)` | `NOT NULL`                | opis techniczny                                              |
+| `ProductDescription` | `nvarchar(max)` | `NOT NULL`                | Opis techniczny                                              |
 | `CategoryID`         | `int`           | `FOREIGN KEY`, `NOT NULL` | Odniesienie do kategorii z tabeli `Categories`               |
 | `UnitInStock`        | `int`           | `NOT NULL`                | Bieżąca liczba sztuk dostępna w magazynie                    |
 | `UnitsOnOrder`       | `int`           | `NOT NULL`                | Liczba sztuk produktu zarezerwowana w aktywnych zamówieniach |
@@ -287,7 +287,7 @@ CREATE TABLE Payments (
 
 ### 10. PlannedProduction
 
-planowane i realizowanw zlecenia w przypadku braków w magazynie. Umożliwia harmonogramowanie pracy.
+Szczegóły zaplanowanego harmonogramu produkcji asortymentu.
 
 - **Kod DDL:**
 
